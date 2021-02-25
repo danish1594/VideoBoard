@@ -1,0 +1,77 @@
+<div id="page-content-wrapper">
+    <app-navigation-bar> </app-navigation-bar>
+    <div class="container-fluid">
+
+        <br><br>
+
+
+
+
+        <div class="card no-border">
+
+            <div class="card-body align">
+                <div class="row">
+                    <div class="col-sm-2 head-text">File manager</div>
+                    <div class="col-sm-2 head-text-1 "><a href="#">Root / New Folder</a></div>
+                    <div class="col-sm-2"><button class="btn btn-primary addFolder">Add folder</button></div>
+                    <div class="col-sm-6 search-box">
+                        <div class="wrap">
+                            <div class="search">
+                                <input type="text" class="searchTerm" placeholder="Search your video files">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <table class="table" >
+                    
+                      <tr>
+                        <th width="180px">NAME</th>
+                        <th width="180px" >SIZE</th>
+                        <th  width="150px">VIEWS</th>
+                        <th width="150px" >STATUS</th>
+                        <th  >CREATED AT</th>
+                        <th  >ACTION</th>
+                        <th></th>
+                      </tr>
+                    
+                    
+                      <tr *ngFor="let row of tableData.FileManager">
+                        <td> {{row.name}}</td>
+                        <td>{{row.size}}</td>
+                        <td>{{row.views}}</td>
+                        <td>{{row.status}}</td>
+                        <td>{{row.createdAt}}</td>
+                        <td><a href="#"><img src="https://i.imgur.com/nPuolyM.png"></a> &nbsp;&nbsp; Export</td>
+                        <td><a href="#"><img src="https://i.imgur.com/1NR5EUh.png"></a>&nbsp;&nbsp; Delete</td>
+                      </tr>
+                    <!---- <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr> !-->
+                
+                  </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>
